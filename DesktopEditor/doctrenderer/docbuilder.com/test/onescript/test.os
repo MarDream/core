@@ -1,7 +1,7 @@
 doctype = ".docx";
 resultPath = "result.docx";
 
-oBuilder = New COMObject("ONLYOFFICE.Builder");
+oBuilder = New COMObject("OMNIDOC.Builder");
 
 oBuilder.Initialize();
 oBuilder.CreateFile(doctype);

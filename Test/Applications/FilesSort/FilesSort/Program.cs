@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,8 +40,8 @@ namespace FilesSort
         }
         static void Main(string[] args)
         {
-            string input = @"D:\logs\doc.onlyoffice.com\7.3.2\files";
-            string output = @"D:\logs\doc.onlyoffice.com\7.3.2\files-sorted";
+            string input = @"D:\logs\doc.omnidoc.com\7.3.2\files";
+            string output = @"D:\logs\doc.omnidoc.com\7.3.2\files-sorted";
 
             DateTime start = DateTime.Now;
             Dictionary<long, long> hash = new Dictionary<long, long>();

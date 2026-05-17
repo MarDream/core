@@ -1003,7 +1003,7 @@ namespace NSBinPptxRW
 					OOX::CPath pathComment = pathFolderCommentDir + FILE_SEPARATOR_STR + strCommentFile;
 					oXmlWriter.SaveToFile(pathComment.GetPath());
 
-					m_oReader.m_pRels->WriteRels(L"http://schemas.onlyoffice.com/comments", L"comments/" + strCommentFile, L"");
+					m_oReader.m_pRels->WriteRels(L"http://schemas.omnidoc.com/comments", L"comments/" + strCommentFile, L"");
 
 					++nComment;
 				}

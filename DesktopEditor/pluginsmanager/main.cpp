@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -267,15 +267,15 @@ public:
 	CPluginsManager()
 	{
 		m_sPluginsDir = L"";
-		m_sMarketplaceUrl = L"https://onlyoffice.github.io";
-		m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE/onlyoffice.github.io";
+		m_sMarketplaceUrl = L"https://omnidoc.github.io";
+		m_sMarketplaceRepo = L"https://github.com/OMNIDOC/omnidoc.github.io";
 
 		m_sSettingsDir = NSSystemUtils::GetAppDataDir() + L"/pluginsmanager";
 
 #ifdef LINUX
-		// GetAppDataDir creates folder with ONLYOFFICE on Linux
+		// GetAppDataDir creates folder with OMNIDOC on Linux
 		// as result - two folders in lower/upper case, working with the correct folder
-		NSStringUtils::string_replace(m_sSettingsDir, L"ONLYOFFICE", L"onlyoffice");
+		NSStringUtils::string_replace(m_sSettingsDir, L"OMNIDOC", L"omnidoc");
 #endif
 
 		m_sSettingsFile = m_sSettingsDir + L"/settings";
@@ -325,15 +325,15 @@ public:
 
 		if ( sUrl.length() )
 		{
-			if (0 == sUrl.find(L"https://onlyoffice.github.io"))
+			if (0 == sUrl.find(L"https://omnidoc.github.io"))
 			{
-				m_sMarketplaceUrl = L"https://onlyoffice.github.io";
-				m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE/onlyoffice.github.io";
+				m_sMarketplaceUrl = L"https://omnidoc.github.io";
+				m_sMarketplaceRepo = L"https://github.com/OMNIDOC/omnidoc.github.io";
 			}
-			else if (0 == sUrl.find(L"https://onlyoffice-plugins.github.io/onlyoffice.github.io"))
+			else if (0 == sUrl.find(L"https://omnidoc-plugins.github.io/omnidoc.github.io"))
 			{
-				m_sMarketplaceUrl = L"https://onlyoffice-plugins.github.io/onlyoffice.github.io";
-				m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE-PLUGINS/onlyoffice.github.io";
+				m_sMarketplaceUrl = L"https://omnidoc-plugins.github.io/omnidoc.github.io";
+				m_sMarketplaceRepo = L"https://github.com/OMNIDOC-PLUGINS/omnidoc.github.io";
 			}
 			else
 			{

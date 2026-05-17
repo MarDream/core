@@ -7,7 +7,7 @@
 #include "../../../../core/Common/Network/FileTransporter/include/FileTransporter.h"
 
 
-//#define URL L"http://nct.onlyoffice.com/sh/XHh"
+//#define URL L"http://nct.omnidoc.com/sh/XHh"
 typedef std::wstring WString;
 typedef NSNetwork::NSFileTransport::CFileDownloader Downloader;
 

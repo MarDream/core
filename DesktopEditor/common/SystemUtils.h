@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -42,7 +42,7 @@ namespace NSSystemUtils
 {
 	static const wchar_t* gc_EnvApplicationName = L"APPLICATION_NAME";
 #ifndef APPLICATION_NAME_DEFAULT
-	static const wchar_t* gc_EnvApplicationNameDefault = L"ONLYOFFICE";
+	static const wchar_t* gc_EnvApplicationNameDefault = L"OMNIDOC";
 #else
 	static const wchar_t* gc_EnvApplicationNameDefault = VALUE_TO_STR(APPLICATION_NAME_DEFAULT);
 #endif

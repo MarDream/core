@@ -24,17 +24,17 @@ int main(int argc, char *argv[])
 {
 	CoInitialize(NULL);
 
-	IONLYOFFICEDocBuilder* oBuilder = NULL;
-	IONLYOFFICEDocBuilderContext* oContext = NULL;
-	IONLYOFFICEDocBuilderContextScope* oScope = NULL;
+	IOMNIDOCDocBuilder* oBuilder = NULL;
+	IOMNIDOCDocBuilderContext* oContext = NULL;
+	IOMNIDOCDocBuilderContextScope* oScope = NULL;
 
-	IONLYOFFICEDocBuilderValue* oGlobal = NULL;
-	IONLYOFFICEDocBuilderValue* oApi = NULL;
-	IONLYOFFICEDocBuilderValue* oDocument = NULL;
-	IONLYOFFICEDocBuilderValue* oParagraph = NULL;
-	IONLYOFFICEDocBuilderValue* oContent = NULL;
+	IOMNIDOCDocBuilderValue* oGlobal = NULL;
+	IOMNIDOCDocBuilderValue* oApi = NULL;
+	IOMNIDOCDocBuilderValue* oDocument = NULL;
+	IOMNIDOCDocBuilderValue* oParagraph = NULL;
+	IOMNIDOCDocBuilderValue* oContent = NULL;
 
-	HRESULT hr = CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_ALL, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
+	HRESULT hr = CoCreateInstance(__uuidof(COMNIDOCDocBuilder), NULL, CLSCTX_ALL, __uuidof(IOMNIDOCDocBuilder), (void**)&oBuilder);
 
 	if (FAILED(hr))
 	{
@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 
 	RELEASEINTERFACE(oContent);
 
-	IONLYOFFICEDocBuilderValue* oArr = NULL;
+	IOMNIDOCDocBuilderValue* oArr = NULL;
 	CComSafeArray<BYTE> arr;
 	arr.Add(1);
 	oContext->CreateTypedArray(ATL::CComVariant(arr), 1, &oArr);

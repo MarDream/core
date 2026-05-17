@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -595,7 +595,7 @@ namespace cpdoccore {
 
 		{
 			// NOTE: При использовании operator<< потока буст пушит туда лишний пробел перед значением.
-			//		С этим пробелом наш редактор onlyoffice на распознает значение.
+			//		С этим пробелом наш редактор omnidoc на распознает значение.
 			// Example: 
 			// <p:attrName> ppt_y</p:attrName>
 			// <p:attrName>ppt_y</p:attrName>

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <functional>
 
-#define URL L"http://download.onlyoffice.com/install/desktop/editors/windows/onlyoffice/updates/editors_update_x64.exe"
+#define URL L"http://download.omnidoc.com/install/desktop/editors/windows/omnidoc/updates/editors_update_x64.exe"
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),

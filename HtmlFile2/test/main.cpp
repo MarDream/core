@@ -22,8 +22,8 @@ void getDirectories(const std::wstring& sDirectory, std::vector<std::wstring>& a
 
 int main()
 {
-    // if (Md::ConvertMdFileToHtml(L"C:\\ONLYOFFICE\\Files\\md\\Bugs\\74626\\file-1.md",
-    //                             L"C:\\ONLYOFFICE\\Files\\md\\Bugs\\74626\\file-1.html"))
+    // if (Md::ConvertMdFileToHtml(L"C:\\OMNIDOC\\Files\\md\\Bugs\\74626\\file-1.md",
+    //                             L"C:\\OMNIDOC\\Files\\md\\Bugs\\74626\\file-1.html"))
     //     std::wcout << L"Good" << std::endl;
     // else
     //     std::wcout << L"Bad" << std::endl;
@@ -113,7 +113,7 @@ int main()
         oParams.SetDescription(L"Description");
 
         // Файл, который открываем
-        std::wstring sFile = L"C:\\ONLYOFFICE\\Files\\html\\test_tag_a_1.html";
+        std::wstring sFile = L"C:\\OMNIDOC\\Files\\html\\test_tag_a_1.html";
         CHtmlFile2 oFile;
         oFile.SetTmpDirectory(sOutputDirectory);
         nResConvert = (bMhtMode ? oFile.OpenMht(sFile, sOutputDirectory, &oParams) : oFile.OpenHtml(sFile, sOutputDirectory, &oParams));

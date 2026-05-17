@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -800,7 +800,7 @@ bool COfficeFileFormatChecker::isOfficeFile(const std::wstring &_fileName)
             bufferDetect = NULL;
             return true;
         }
-		else if (isOnlyOfficeFormatFile(fileName))
+		else if (isOmnidocFormatFile(fileName))
         {
             if (bufferDetect)
                 delete[] bufferDetect;
@@ -1187,7 +1187,7 @@ bool COfficeFileFormatChecker::isXlsFormatFile(const std::wstring &fileName)
 	}
 	return false;
 }
-bool COfficeFileFormatChecker::isOnlyOfficeFormatFile(const std::wstring &fileName)
+bool COfficeFileFormatChecker::isOmnidocFormatFile(const std::wstring &fileName)
 {
 	COfficeUtils OfficeUtils(NULL);
 

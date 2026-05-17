@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -31,4 +31,4 @@
  */
 #pragma once
 
-static const char* g_format_oform_pdf_meta_tag = "ONLYOFFICEFORM";
+static const char* g_format_oform_pdf_meta_tag = "OMNIDOCFORM";

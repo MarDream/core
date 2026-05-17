@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -10071,7 +10071,7 @@ int Binary_DocumentTableReader::ReadSdtFormPr(BYTE type, long length, void* poRe
 			m_oFileWriter.m_pDrawingConverter->GetContentTypes()->Registration(L"oform/fieldMaster+xml", L"", pathOFormMaster.substr(3));	// del "../"		
 
 			unsigned int rId;
-			m_oFileWriter.m_pDrawingConverter->WriteRels(L"https://schemas.onlyoffice.com/relationships/oform-fieldMaster", pathOFormMaster, L"", &rId);
+			m_oFileWriter.m_pDrawingConverter->WriteRels(L"https://schemas.omnidoc.com/relationships/oform-fieldMaster", pathOFormMaster, L"", &rId);
 
 			pFormPr->m_oFieldRid.Init();
 			pFormPr->m_oFieldRid->SetValue(L"rId" + std::to_wstring(rId));

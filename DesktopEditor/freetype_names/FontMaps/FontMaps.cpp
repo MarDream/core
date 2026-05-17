@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -110,7 +110,7 @@ public:
 int main(int argc, char* argv[])
 {
     CApplicationFonts oFonts;
-    oFonts.InitializeFromFolder(L"D:\\onlyoffice_trunk\\fonts\\all");
+    oFonts.InitializeFromFolder(L"D:\\omnidoc_trunk\\fonts\\all");
     //oFonts.Initialize();
 
     std::wstring strFontDictionaryPath = L"D:\\GIT\\core\\DesktopEditor\\freetype_names\\FontMaps\\FontDictionary.h";

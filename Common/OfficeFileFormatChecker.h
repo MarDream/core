@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -67,7 +67,7 @@ public:
 
 	bool isOOXFormatFile(const std::wstring& fileName, bool unpacked = false);
 	bool isOpenOfficeFormatFile(const std::wstring& fileName, std::wstring& documentID);
-	bool isOnlyOfficeFormatFile(const std::wstring& fileName);
+	bool isOmnidocFormatFile(const std::wstring& fileName);
 	bool isMacFormatFile(const std::wstring& fileName);
 	bool isHwpxFile(const std::wstring& fileName);
 

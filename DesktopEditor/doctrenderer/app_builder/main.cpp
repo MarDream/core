@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -144,7 +144,7 @@ int main(int argc, char *argv[])
 				if (!NSFile::CFileBinary::Exists(sLicensePathSrc))
 					return 1;
 
-				std::wstring sLicensePath = NSSystemUtils::GetEnvVariable(L"ONLYOFFICE_BUILDER_LICENSE");
+				std::wstring sLicensePath = NSSystemUtils::GetEnvVariable(L"OMNIDOC_BUILDER_LICENSE");
 				if (CheckLicense(sLicensePathSrc, sLicensePath))
 					return 0;
 

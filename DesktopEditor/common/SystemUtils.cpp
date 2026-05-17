@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -176,7 +176,7 @@ namespace NSSystemUtils
 
 	std::wstring GetBuildBranding()
 	{
-		std::string sBrandingA = "ONLYOFFICE";
+		std::string sBrandingA = "OMNIDOC";
 #ifdef BUILD_BRANDING_NAME
 		sBrandingA = BUILD_BRANDING_NAME;
 #endif

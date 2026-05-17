@@ -38,7 +38,7 @@ function CSpellchecker(settings)
 	var _port = null;
 	if (isUseSharedWorker)
 	{
-		this.worker = new SharedWorker(worker_src, "onlyoffice-spellchecker");
+		this.worker = new SharedWorker(worker_src, "omnidoc-spellchecker");
 		_port = this.worker.port;
 	}
 	else

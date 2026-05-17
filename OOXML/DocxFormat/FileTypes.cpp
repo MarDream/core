@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -113,7 +113,7 @@ namespace OOX
 
 		const FileType DocumentComments		(L"", L"commentsDocument.xml",
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml",
-												L"http://schemas.onlyoffice.com/commentsDocument");
+												L"http://schemas.omnidoc.com/commentsDocument");
 
 		const FileType CommentsExt		(L"", L"commentsExtended.xml", 
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml",
@@ -121,7 +121,7 @@ namespace OOX
 
 		const FileType DocumentCommentsExt		(L"", L"commentsExtendedDocument.xml",
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml",
-												L"http://schemas.onlyoffice.com/commentsExtendedDocument");
+												L"http://schemas.omnidoc.com/commentsExtendedDocument");
 
 		const FileType CommentsExtensible		(L"", L"commentsExtensible.xml",
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
@@ -129,7 +129,7 @@ namespace OOX
 
 		const FileType DocumentCommentsExtensible (L"", L"commentsExtensibleDocument.xml",
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
-												L"http://schemas.onlyoffice.com/commentsExtensibleDocument");
+												L"http://schemas.omnidoc.com/commentsExtensibleDocument");
 
 		const FileType CommentsIds		(L"", L"commentsIds.xml",
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
@@ -137,11 +137,11 @@ namespace OOX
 
 		const FileType DocumentCommentsIds		(L"", L"commentsIdsDocument.xml",
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
-												L"http://schemas.onlyoffice.com/commentsIdsDocument");
+												L"http://schemas.omnidoc.com/commentsIdsDocument");
 
 		const FileType CommentsUserData		(L"", L"commentsUserData.xml",
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
-												L"http://schemas.onlyoffice.com/commentsUserData");
+												L"http://schemas.omnidoc.com/commentsUserData");
 
 		const FileType People			(L"", L"people.xml", 
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml",
@@ -149,7 +149,7 @@ namespace OOX
 
 		const FileType DocumentPeople			(L"", L"peopleDocument.xml",
 												L"application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml",
-												L"http://schemas.onlyoffice.com/peopleDocument");
+												L"http://schemas.omnidoc.com/peopleDocument");
 
 		const FileType CustomXml		(L"customXml", L"item.xml",
 												L"",
@@ -271,7 +271,7 @@ namespace OOX
 
 		const FileType JsaProject			(L"", L"jsaProject.bin",
 												L"",
-												L"http://schemas.onlyoffice.com/jsaProject");
+												L"http://schemas.omnidoc.com/jsaProject");
 
 		const FileType ImportedExternalContent(L"embeddings", L"",
 												L"",

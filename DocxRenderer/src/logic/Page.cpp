@@ -2469,7 +2469,7 @@ namespace NSDocxRenderer
 		};
 
 		// 2 main cases
-		// 1. lines of tables as a big rectangles with lines (onlyoffice), work with path commands
+		// 1. lines of tables as a big rectangles with lines (omnidoc), work with path commands
 		// 2. lines of tables as a small rectangels for a single line (adobe), work with entire shape
 		// also word -> pdf adobe sets points as crossings of the table lines, so we can use it
 

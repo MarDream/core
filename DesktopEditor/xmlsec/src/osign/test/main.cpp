@@ -136,7 +136,7 @@ TEST_F(COSignTest, serialize_storage_by_property)
 {
 	// генерируем новый сертификат с настройками
 	std::map<std::wstring, std::wstring> properties;
-	properties.insert(std::make_pair(OSign::Properties::Email, L"sign@onlyoffice.com"));
+	properties.insert(std::make_pair(OSign::Properties::Email, L"sign@omnidoc.com"));
 	properties.insert(std::make_pair(OSign::Properties::Phone, L"+00000000000"));
 	std::wstring sNameTest = L"NameTest";
 	std::wstring sValueTest = L"ValueTest";

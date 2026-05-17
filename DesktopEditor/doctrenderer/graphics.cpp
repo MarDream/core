@@ -1212,9 +1212,9 @@ namespace NSGraphics
 		if (src.find(L"data:") == 0)
 		{
 			std::wstring strImage = m_pAppImage->GetImagesDirectory() + L"/texture.png";
-			bool bIsOnlyOfficeHatch = false;
-			if(src.find(L"onlyoffice_hatch") != std::wstring::npos)
-				bIsOnlyOfficeHatch = true;
+			bool bIsOmnidocHatch = false;
+			if(src.find(L"omnidoc_hatch") != std::wstring::npos)
+				bIsOmnidocHatch = true;
 #ifdef ENABLE_GR_LOGS
 			std::wcout << L"put_brushTexture " << src << L"  "  << type << std::endl;
 #endif
@@ -1227,7 +1227,7 @@ namespace NSGraphics
 			BYTE* pImageData = new BYTE[nDecodeLen + 64];
 			if (TRUE == NSBase64::Base64Decode(sBase64MultyByte.c_str(), sBase64MultyByte.length(), pImageData, &nDecodeLen))
 			{
-				if(!bIsOnlyOfficeHatch)
+				if(!bIsOmnidocHatch)
 				{
 					NSFile::CFileBinary oImageWriter;
 					if (oImageWriter.CreateFileW(strImage))

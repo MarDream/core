@@ -17,9 +17,9 @@ DESTDIR = $$PWD/build
 
 # Use installation builder path, or set the own path.
 core_windows {
-    DOCUMENT_BUILDER_INSTALL_PATH="C:/Program Files/ONLYOFFICE/DocumentBuilder"
+    DOCUMENT_BUILDER_INSTALL_PATH="C:/Program Files/OMNIDOC/DocumentBuilder"
 } else {
-    DOCUMENT_BUILDER_INSTALL_PATH=/opt/onlyoffice/documentbuilder
+    DOCUMENT_BUILDER_INSTALL_PATH=/opt/omnidoc/documentbuilder
 }
 
 DEFINES += "DOCUMENT_BUILDER_INSTALL_PATH=\"$$DOCUMENT_BUILDER_INSTALL_PATH\""

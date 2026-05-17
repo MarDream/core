@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -159,10 +159,10 @@ namespace OOX
 												L"application/vnd.ms-excel.timelineCache+xml",
 												L"http://schemas.microsoft.com/office/2011/relationships/timelineCache",
 												L"timelineCaches/timelineCache", true, true);
-			//onlyoffice workbook comments
+			//omnidoc workbook comments
 			const FileType WorkbookComments	(L"", L"workbookComments.bin",
 												L"",
-												L"http://schemas.onlyoffice.com/workbookComments");
+												L"http://schemas.omnidoc.com/workbookComments");
 			
 			const FileType Metadata			(L"", L"metadata.xml",
 												L"application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml",

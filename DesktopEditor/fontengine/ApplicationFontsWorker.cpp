@@ -556,7 +556,7 @@ public:
 		return oWriterJS.GetData();
 	}
 
-	void SaveAllFontsJS(NSFonts::IApplicationFonts* applicationFonts, int nVersion = ONLYOFFICE_ALL_FONTS_VERSION)
+	void SaveAllFontsJS(NSFonts::IApplicationFonts* applicationFonts, int nVersion = OMNIDOC_ALL_FONTS_VERSION)
 	{
 		if (CheckBreak()) return;
 
@@ -707,7 +707,7 @@ public:
 
 		std::wstring strFontSelectionBin = L"";
 		// нужно ли скидывать font_selection.bin
-		if (ONLYOFFICE_ALL_FONTS_VERSION == nVersion && !m_bIsCheckThumbnailsMode)
+		if (OMNIDOC_ALL_FONTS_VERSION == nVersion && !m_bIsCheckThumbnailsMode)
 		{
 			strFontSelectionBin = m_pMain->m_sDirectory + L"/font_selection.bin";
 		}
@@ -725,7 +725,7 @@ public:
 		std::wstring sAllFontsPath = m_pMain->m_sDirectory + L"/AllFonts.js";
 		if (!m_pMain->m_sAllFontsJSPath.empty())
 			sAllFontsPath = m_pMain->m_sAllFontsJSPath;
-		if (nVersion != ONLYOFFICE_ALL_FONTS_VERSION)
+		if (nVersion != OMNIDOC_ALL_FONTS_VERSION)
 			sAllFontsPath += (L"." + std::to_wstring((int)(nVersion + 1)));
 
 		if (m_bIsCheckThumbnailsMode)
@@ -1178,7 +1178,7 @@ public:
 		{
 			BYTE* pData = NULL;
 			LONG lLen = 0;
-			NSFonts::CFontListToBufferSerializer oSerializer(L"", false, ONLYOFFICE_ALL_FONTS_VERSION);
+			NSFonts::CFontListToBufferSerializer oSerializer(L"", false, OMNIDOC_ALL_FONTS_VERSION);
 			applicationFonts->GetList()->ToBuffer(&pData, &lLen, oSerializer);
 
 			NSFile::CFileBinary oFile;
@@ -1664,12 +1664,12 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 			delete[] pBuffer;
 		}
 
-#ifdef ONLYOFFICE_FONTS_VERSION
+#ifdef OMNIDOC_FONTS_VERSION
 		if (0 != strFonts.size())
 		{
 			// check version!!!
 			std::string sOO_Version = strFonts[0];
-			if (0 != sOO_Version.find("ONLYOFFICE_FONTS_VERSION_"))
+			if (0 != sOO_Version.find("OMNIDOC_FONTS_VERSION_"))
 			{
 				strFonts.clear();
 			}
@@ -1677,7 +1677,7 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 			{
 				std::string sVersion = sOO_Version.substr(25);
 				int nVersion = std::stoi(sVersion);
-				if (nVersion != ONLYOFFICE_FONTS_VERSION)
+				if (nVersion != OMNIDOC_FONTS_VERSION)
 					strFonts.clear();
 				else
 					strFonts.erase(strFonts.begin());
@@ -1764,9 +1764,9 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 
 		// формируем новый набор шрифтов
 		NSStringUtils::CStringBuilder oFontsLog;
-#ifdef ONLYOFFICE_FONTS_VERSION
-		oFontsLog.WriteString(L"ONLYOFFICE_FONTS_VERSION_");
-		oFontsLog.WriteString(std::to_wstring(ONLYOFFICE_FONTS_VERSION));
+#ifdef OMNIDOC_FONTS_VERSION
+		oFontsLog.WriteString(L"OMNIDOC_FONTS_VERSION_");
+		oFontsLog.WriteString(std::to_wstring(OMNIDOC_FONTS_VERSION));
 		oFontsLog.WriteString(L"\n");
 #endif
 		int nCount = (int)strFontsW_Cur.size();
@@ -1780,12 +1780,12 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 		pApplicationF->InitializeFromArrayFiles(strFontsW_Cur, nFlag);
 
 		// скидываем все
-		m_pInternal->SaveAllFontsJS(pApplicationF, ONLYOFFICE_ALL_FONTS_VERSION);
+		m_pInternal->SaveAllFontsJS(pApplicationF, OMNIDOC_ALL_FONTS_VERSION);
 
 		// поддержка старой версии AllFonts.js
 		if (m_bIsUseAllVersions)
 		{
-			for (int nVer = 0; nVer < ONLYOFFICE_ALL_FONTS_VERSION; ++nVer)
+			for (int nVer = 0; nVer < OMNIDOC_ALL_FONTS_VERSION; ++nVer)
 				m_pInternal->SaveAllFontsJS(pApplicationF, nVer);
 		}
 

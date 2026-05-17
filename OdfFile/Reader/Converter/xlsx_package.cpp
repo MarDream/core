@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -271,7 +271,7 @@ void xl_files::write(const std::wstring & RootPath)
     }
 	if (jsaProject_)
 	{
-		rels_files_.add( relationship(L"jsaId", L"http://schemas.onlyoffice.com/jsaProject", L"jsaProject.bin" ) );
+		rels_files_.add( relationship(L"jsaId", L"http://schemas.omnidoc.com/jsaProject", L"jsaProject.bin" ) );
 		jsaProject_->write( path );
 	}
     rels_files_.write(path);

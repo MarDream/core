@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -996,9 +996,9 @@ HRESULT CGraphicsRenderer::DrawPath(const LONG& nType)
 				}
 				else if (m_oBrush.TexturePath.find(L"data:") == 0)
 				{
-					bool bIsOnlyOfficeHatch = false;
-					if (m_oBrush.TexturePath.find(L"onlyoffice_hatch") != std::wstring::npos)
-					bIsOnlyOfficeHatch = true;
+					bool bIsOmnidocHatch = false;
+					if (m_oBrush.TexturePath.find(L"omnidoc_hatch") != std::wstring::npos)
+					bIsOmnidocHatch = true;
 
 					int countErase = (int)(m_oBrush.TexturePath.find(',') + 1);
 					int nInputSize = (int)(m_oBrush.TexturePath.length() - countErase);
@@ -1009,7 +1009,7 @@ HRESULT CGraphicsRenderer::DrawPath(const LONG& nType)
 					if (TRUE == NSBase64::Base64Decode(pInputSrc, nInputSize, pImageData, &nDecodeLen))
 					{
 						CBgraFrame oFrame;
-						if (bIsOnlyOfficeHatch)
+						if (bIsOmnidocHatch)
 						{
 							int nSize = (int)sqrt(nDecodeLen >> 2);
 							oFrame.put_IsRGBA(true);

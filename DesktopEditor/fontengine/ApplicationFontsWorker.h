@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -36,8 +36,8 @@
 #include <vector>
 #include "../graphics/pro/Fonts.h"
 
-#define ONLYOFFICE_FONTS_VERSION     15
-#define ONLYOFFICE_ALL_FONTS_VERSION 2
+#define OMNIDOC_FONTS_VERSION     15
+#define OMNIDOC_ALL_FONTS_VERSION 2
 
 class CApplicationFontsWorkerBreaker
 {

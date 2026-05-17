@@ -129,7 +129,7 @@ public:
 	{
 		std::map<std::wstring, std::wstring> properties;
 		properties.insert(std::make_pair(L"DNS", L"8.8.8.8"));
-		properties.insert(std::make_pair(L"email", L"sign@onlyoffice.com"));
+		properties.insert(std::make_pair(L"email", L"sign@omnidoc.com"));
 
 		return NSCertificate::GenerateByAlg("ecdsa512", properties);
 	}
@@ -137,7 +137,7 @@ public:
 	{
 		std::map<std::wstring, std::wstring> properties;
 		properties.insert(std::make_pair(L"DNS", L"8.8.8.8"));
-		properties.insert(std::make_pair(L"email", L"sign@onlyoffice.com"));
+		properties.insert(std::make_pair(L"email", L"sign@omnidoc.com"));
 
 		return NSCertificate::GenerateByAlg("rsa2048", properties);
 	}
@@ -180,10 +180,10 @@ TEST_F(CPdfFileTest, GetMetaData)
 	BYTE* pMetaData = NULL;
 	DWORD nMetaLength = 0;
 
-	if (pdfFile->GetMetaData(wsSrcFile, L"ONLYOFFICEFORM", &pMetaData, nMetaLength))
+	if (pdfFile->GetMetaData(wsSrcFile, L"OMNIDOCFORM", &pMetaData, nMetaLength))
 	{
 		NSFile::CFileBinary oFile;
-		if (oFile.CreateFileW(NSFile::GetProcessDirectory() + L"/ONLYOFFICEFORM.docxf"))
+		if (oFile.CreateFileW(NSFile::GetProcessDirectory() + L"/OMNIDOCFORM.docxf"))
 			oFile.WriteFile(pMetaData, nMetaLength);
 		oFile.CloseFile();
 
@@ -319,9 +319,9 @@ TEST_F(CPdfFileTest, SetMetaData)
 
 	BYTE* pFileData = NULL;
 	DWORD nFileSize;
-	std::wstring sFile = NSFile::GetProcessDirectory() + L"/ONLYOFFICEFORM.docxf";
+	std::wstring sFile = NSFile::GetProcessDirectory() + L"/OMNIDOCFORM.docxf";
 	EXPECT_TRUE(NSFile::CFileBinary::ReadAllBytes(sFile, &pFileData, nFileSize));
-	pdfFile->AddMetaData(L"ONLYOFFICEFORM", pFileData, nFileSize);
+	pdfFile->AddMetaData(L"OMNIDOCFORM", pFileData, nFileSize);
 	RELEASEARRAYOBJECTS(pFileData);
 
 	EXPECT_HRESULT_SUCCEEDED(pdfFile->OnlineWordToPdfFromBinary(NSFile::GetProcessDirectory() + L"/pdf.bin", wsDstFile));

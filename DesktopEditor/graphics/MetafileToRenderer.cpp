@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -182,9 +182,9 @@ std::wstring IMetafileToRenderter::GetImagePath(const std::wstring& sPath)
 			if (std::wstring::npos == posZ)
 				throw;
 
-			bool bIsOnlyOfficeHatch = false;
-			if (std::wstring::npos != sPath.substr(0, posZ).find(L"onlyoffice_hatch"))
-				bIsOnlyOfficeHatch = true;
+			bool bIsOmnidocHatch = false;
+			if (std::wstring::npos != sPath.substr(0, posZ).find(L"omnidoc_hatch"))
+				bIsOmnidocHatch = true;
 
 			int nBase64Size = (int)(sPath.length() - posZ - 1);
 			const wchar_t* pBase64Data = sPath.c_str() + posZ + 1;
@@ -205,7 +205,7 @@ std::wstring IMetafileToRenderter::GetImagePath(const std::wstring& sPath)
 
 				std::wstring sTempFile = NSFile::CFileBinary::CreateTempFileWithUniqueName(m_sTempDir, L"Image_");
 
-				if (!bIsOnlyOfficeHatch)
+				if (!bIsOmnidocHatch)
 				{
 					NSFile::CFileBinary oFile;
 					if (oFile.CreateFileW(sTempFile))

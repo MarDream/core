@@ -4692,7 +4692,7 @@ void GfxImageColorMap::getRGB(Guchar *x, GfxRGB *rgb, GfxRenderingIntent ri) {
   }
 }
 
-// onlyoffice
+// omnidoc
 int GfxImageColorMap::getFillType()
 {
     if (colorSpace2)

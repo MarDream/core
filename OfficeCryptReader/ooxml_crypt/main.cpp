@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -370,7 +370,7 @@ int main(int argc, char** argv)
 	if (EncryptRecord.Type == rtEncrypt)
 	{
 		ECMACryptFile file;
-		bool result = file.EncryptOfficeFile(file_path, file_path, file_password, L"ONLYOFFICE CryptoEngine (Version 1)\n\n");
+		bool result = file.EncryptOfficeFile(file_path, file_path, file_password, L"OMNIDOC CryptoEngine (Version 1)\n\n");
 		if (!result)
 		{
 			std::cout << "error: file is not encrypted" << std::endl;

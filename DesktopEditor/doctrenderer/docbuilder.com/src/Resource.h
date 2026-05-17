@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -35,7 +35,7 @@
 //
 
 #define IDS_PROJNAME                    100
-#define IDR_ONLYOFFICEDOCBUILDER		101
+#define IDR_OMNIDOCDOCBUILDER		101
 
 // Next default values for new objects
 // 

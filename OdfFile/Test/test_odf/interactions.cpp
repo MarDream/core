@@ -401,7 +401,7 @@ TEST_F(ODP2OOX_AnimationRunProgramTest, program_rel_target)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto programRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring targetExp = L"../../../../build_tools/out/win_64/onlyoffice/core/x2t.exe";
+	const std::wstring targetExp = L"../../../../build_tools/out/win_64/omnidoc/core/x2t.exe";
 
 	EXPECT_EQ(programRel.target(), targetExp);
 }
@@ -537,7 +537,7 @@ TEST_F(OOX2ODP_RunProgramAnimationTest, mediaitem_path)
 	ASSERT_GE(items.size(), 1);
 
 	auto audioItem = items[0];
-	const std::wstring audioItemPath = L"../../../../build_tools/out/win_64/onlyoffice/core/x2t";
+	const std::wstring audioItemPath = L"../../../../build_tools/out/win_64/omnidoc/core/x2t";
 
 	EXPECT_EQ(audioItem.second, audioItemPath);
 }

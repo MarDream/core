@@ -1,12 +1,12 @@
-﻿using static System.Console;
+﻿﻿using static System.Console;
 using System.Runtime.InteropServices;
 
-using onlyofficedocbuilder;
+using omnidocdocbuilder;
 
-using CDocBuilder = onlyofficedocbuilder.CONLYOFFICEDocBuilder;
-using CValue = onlyofficedocbuilder.CONLYOFFICEDocBuilderValue;
-using CContext = onlyofficedocbuilder.CONLYOFFICEDocBuilderContext;
-using CContextScope = onlyofficedocbuilder.CONLYOFFICEDocBuilderContextScope;
+using CDocBuilder = omnidocdocbuilder.COMNIDOCDocBuilder;
+using CValue = omnidocdocbuilder.COMNIDOCDocBuilderValue;
+using CContext = omnidocdocbuilder.COMNIDOCDocBuilderContext;
+using CContextScope = omnidocdocbuilder.COMNIDOCDocBuilderContextScope;
 
 namespace Test
 {

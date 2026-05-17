@@ -134,7 +134,7 @@ public:
 		m_cert = NULL;
 		m_key = NULL;
 
-		m_separator = ";;;;;;;ONLYOFFICE;;;;;;;";
+		m_separator = ";;;;;;;OMNIDOC;;;;;;;";
 		m_alg = OOXML_HASH_ALG_INVALID;
 	}
 	virtual ~CCertificate_openssl()

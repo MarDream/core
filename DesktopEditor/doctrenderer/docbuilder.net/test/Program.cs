@@ -11,7 +11,7 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+            string workDirectory = "C:/Program Files/OMNIDOC/DocumentBuilder";
             string resultPath = "result.docx";
 
             // add Docbuilder dlls in path

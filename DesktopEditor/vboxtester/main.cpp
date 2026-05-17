@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -221,7 +221,7 @@ public:
 		m_sReportName =		L"report.txt";
 		m_sStdoutFile =		L"stdout.txt";
 
-		m_sEditorsPath =	L"/opt/onlyoffice/desktopeditors/DesktopEditors";
+		m_sEditorsPath =	L"/opt/omnidoc/desktopeditors/DesktopEditors";
 		m_sSuccessOutput =	L"[DesktopEditors]: start page loaded";
 
 		m_sBranch =			L"";
@@ -704,7 +704,7 @@ public:
 				{
 					sData = L"#!/bin/bash\n" \
 							L"echo \"Install DesktopEditors\"\n" \
-							L"apt purge onlyoffice-desktopeditors -y\n" \
+							L"apt purge omnidoc-desktopeditors -y\n" \
 							L"dpkg -i ./" + sDistribFile + "\n" \
 							L"apt install -f";
 				}
@@ -719,7 +719,7 @@ public:
 				{
 					sData = L"#!/bin/bash\n" \
 							L"echo \"Install DesktopEditors\"\n" \
-							L"rpm -e onlyoffice-desktopeditors\n" \
+							L"rpm -e omnidoc-desktopeditors\n" \
 							L"rpm -i ./" + sDistribFile;
 				}
 			}
@@ -1007,21 +1007,21 @@ public:
 					// Prepare urls
 					if ( m_sBranch.length() && m_sVersion.length() )
 					{
-						std::wstring sAmazonS3 = L"https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux";
+						std::wstring sAmazonS3 = L"https://s3.eu-west-1.amazonaws.com/repo-doc-omnidoc-com/desktop/linux";
 
 						if ( m_sDebianStart.length() )
 						{
-							m_sDebianUrl = sAmazonS3 + L"/debian/onlyoffice-desktopeditors_{BRANCH}-{VERSION}_amd64.deb";
+							m_sDebianUrl = sAmazonS3 + L"/debian/omnidoc-desktopeditors_{BRANCH}-{VERSION}_amd64.deb";
 							NSStringUtils::string_replace(m_sDebianUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sDebianUrl, L"{VERSION}", m_sVersion);
 						}
 						if ( m_sRedHatStart.length() )
 						{
-							m_sCentosUrl = sAmazonS3 + L"/rhel/onlyoffice-desktopeditors-{BRANCH}-{VERSION}.el7.x86_64.rpm";
+							m_sCentosUrl = sAmazonS3 + L"/rhel/omnidoc-desktopeditors-{BRANCH}-{VERSION}.el7.x86_64.rpm";
 							NSStringUtils::string_replace(m_sCentosUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sCentosUrl, L"{VERSION}", m_sVersion);
 
-							m_sOpSuseUrl = sAmazonS3 + L"/suse/onlyoffice-desktopeditors-{BRANCH}-{VERSION}.suse12.x86_64.rpm";
+							m_sOpSuseUrl = sAmazonS3 + L"/suse/omnidoc-desktopeditors-{BRANCH}-{VERSION}.suse12.x86_64.rpm";
 							NSStringUtils::string_replace(m_sOpSuseUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sOpSuseUrl, L"{VERSION}", m_sVersion);
 						}

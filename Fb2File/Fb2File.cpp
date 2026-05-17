@@ -2091,7 +2091,7 @@ HRESULT CFb2File::Open(const std::wstring& sPath, const std::wstring& sDirectory
 		oCoreWriter.CloseFile();
 	}
 
-	// Получаем версию ONLYOFFICE
+	// Получаем версию OMNIDOC
 	std::wstring sApplication = NSSystemUtils::GetEnvVariable(NSSystemUtils::gc_EnvApplicationName);
 	if (sApplication.empty())
 		sApplication = NSSystemUtils::gc_EnvApplicationNameDefault;

@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -86,7 +86,7 @@ namespace OOX
 
 			extern const FileType XlBinaryIndex;
 
-			//onlyoffice workbook comments
+			//omnidoc workbook comments
 			extern const FileType WorkbookComments;
 
 			extern const FileType SpreadsheetFlat;

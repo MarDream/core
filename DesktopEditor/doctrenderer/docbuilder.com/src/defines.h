@@ -19,23 +19,23 @@
 
 
 #define C_DOCBUILDER_VALUE_HEADER \
-[coclass, uuid("85C41585-25D7-40F1-9CC6-FA17052650F4"), threading(apartment), vi_progid("ONLYOFFICE.BuilderValue"), progid("ONLYOFFICE.BuilderValue.1"), version(1.0)]
+[coclass, uuid("85C41585-25D7-40F1-9CC6-FA17052650F4"), threading(apartment), vi_progid("OMNIDOC.BuilderValue"), progid("OMNIDOC.BuilderValue.1"), version(1.0)]
 
 #define C_DOCBUILDER_CONTEXT_SCOPE_HEADER \
-[coclass, uuid("c54e2b15-ff5b-45a2-aa15-89a02605c30c"), threading(apartment), vi_progid("ONLYOFFICE.BuilderContextScope"), progid("ONLYOFFICE.BuilderContextScope.1"), version(1.0)]
+[coclass, uuid("c54e2b15-ff5b-45a2-aa15-89a02605c30c"), threading(apartment), vi_progid("OMNIDOC.BuilderContextScope"), progid("OMNIDOC.BuilderContextScope.1"), version(1.0)]
 
 #define C_DOCBUILDER_CONTEXT_HEADER \
-[coclass, uuid("299250bb-16c2-4ab4-8a49-a0c350d66bb5"), threading(apartment), vi_progid("ONLYOFFICE.BuilderContext"), progid("ONLYOFFICE.BuilderContext.1"), version(1.0)]
+[coclass, uuid("299250bb-16c2-4ab4-8a49-a0c350d66bb5"), threading(apartment), vi_progid("OMNIDOC.BuilderContext"), progid("OMNIDOC.BuilderContext.1"), version(1.0)]
 
 #define C_DOCBUILDER_HEADER \
-[coclass, uuid("9BF69F3C-1506-41B9-B8EE-2839948C02E9"), threading(apartment), vi_progid("ONLYOFFICE.Builder"), progid("ONLYOFFICE.Builder.1"), version(1.0)]
+[coclass, uuid("9BF69F3C-1506-41B9-B8EE-2839948C02E9"), threading(apartment), vi_progid("OMNIDOC.Builder"), progid("OMNIDOC.Builder.1"), version(1.0)]
 
-#define I_DOCBUILDER_VALUE IONLYOFFICEDocBuilderValue
-#define I_DOCBUILDER_CONTEXT_SCOPE IONLYOFFICEDocBuilderContextScope
-#define I_DOCBUILDER_CONTEXT IONLYOFFICEDocBuilderContext
-#define I_DOCBUILDER IONLYOFFICEDocBuilder
+#define I_DOCBUILDER_VALUE IOMNIDOCDocBuilderValue
+#define I_DOCBUILDER_CONTEXT_SCOPE IOMNIDOCDocBuilderContextScope
+#define I_DOCBUILDER_CONTEXT IOMNIDOCDocBuilderContext
+#define I_DOCBUILDER IOMNIDOCDocBuilder
 
-#define C_DOCBUILDER_VALUE CONLYOFFICEDocBuilderValue
-#define C_DOCBUILDER_CONTEXT_SCOPE CONLYOFFICEDocBuilderContextScope
-#define C_DOCBUILDER_CONTEXT CONLYOFFICEDocBuilderContext
-#define C_DOCBUILDER CONLYOFFICEDocBuilder
+#define C_DOCBUILDER_VALUE COMNIDOCDocBuilderValue
+#define C_DOCBUILDER_CONTEXT_SCOPE COMNIDOCDocBuilderContextScope
+#define C_DOCBUILDER_CONTEXT COMNIDOCDocBuilderContext
+#define C_DOCBUILDER COMNIDOCDocBuilder

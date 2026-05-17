@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * (c) Copyright Ascensio System SIA 2010-2023
  *
  * This program is a free software product. You can redistribute it and/or
@@ -3088,7 +3088,7 @@ namespace Settings
 	}
 	std::wstring CSettingsCustom::GetSchemaUrl()
 	{
-		return L"http://schemas.onlyoffice.com/settingsCustom";
+		return L"http://schemas.omnidoc.com/settingsCustom";
 	}
 	bool CSettingsCustom::IsEmpty()
 	{

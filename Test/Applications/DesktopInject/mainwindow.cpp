@@ -44,7 +44,7 @@ void CProcessEditor::StartEditor()
 
     HKEY hKey = 0;
     HKEY hRoot = HKEY_LOCAL_MACHINE;
-    if (ERROR_SUCCESS == RegOpenKeyExW(hRoot, L"SOFTWARE\\ONLYOFFICE\\DesktopEditors", 0, KEY_READ, &hKey))
+    if (ERROR_SUCCESS == RegOpenKeyExW(hRoot, L"SOFTWARE\\OMNIDOC\\DesktopEditors", 0, KEY_READ, &hKey))
     {
         if (ERROR_SUCCESS == RegQueryValueExW(hKey, L"AppPath", 0, NULL, (LPBYTE)sBuffer, &dwBufferSize))
         {
@@ -60,7 +60,7 @@ void CProcessEditor::StartEditor()
 #endif
 
 #ifdef Q_OS_LINUX
-    sApplicationPath = "onlyoffice-desktopeditors";
+    sApplicationPath = "omnidoc-desktopeditors";
 #endif
 
     start(sApplicationPath, args);
